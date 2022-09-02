@@ -99,18 +99,18 @@ function deletarReceita(id) {
   console.log("receita deletada com sucesso!");
 }
 
-function deletarReceita(id) {
-  const novaListaDeReceitas = listaDeReceitas.filter(
-    (receita) => receita.id != id
-  );
+// function deletarReceita(id) {
+//   const novaListaDeReceitas = listaDeReceitas.filter(
+//     (receita) => receita.id != id
+//   );
 
-  if (novaListaDeReceitas.length == listaDeReceitas.length) {
-    return console.log("Não encontrei o id");
-  }
+//   if (novaListaDeReceitas.length == listaDeReceitas.length) {
+//     return console.log("Não encontrei o id");
+//   }
 
-  listaDeReceitas = novaListaDeReceitas;
-  console.log("receita deletada com sucesso!");
-}
+//   listaDeReceitas = novaListaDeReceitas;
+//   console.log("receita deletada com sucesso!");
+// }
 
 // function deletarReceita(id) {
 //   for (let i = 0; i < listaDeReceitas.length; i++) {
@@ -123,37 +123,6 @@ function deletarReceita(id) {
 //   console.log("Receita não encontrada");
 // }
 
-// function somar(a, b) {
-//   return a + b;
-// }
-
-const somar = (a, b) => a + b;
-const multiplicacao = (a, b) => a * b;
-
-const calculadora = (a, b, acao) => {
-  return acao(a, b);
-};
-
-const condicaoDeReceita = (receita) => (receita.vegano = true);
-
-// const novoArray = listaDeReceitas.map(condicaoDeReceita);
-
-// const receitaNormais = listaDeReceitas.filter(
-//   (receita) => receita.vegano == true
-// );
-
-// const novoArray = [];
-// listaDeReceitas.forEach((receita) => {
-//   receita.vegano = true;
-
-//   novoArray.push(receita);
-// });
-
-function forEach(acao) {
-  for (let index = 0; index < array.length; index++) {
-    acao(array[index], index, array);
-  }
-}
 
 const atualizaReceita = (id, receitaAtualizada) => {
   let foiAtualizado = false;
@@ -173,16 +142,6 @@ const atualizaReceita = (id, receitaAtualizada) => {
 
     foiAtualizado = true;
   });
-
-  console.log(
-    foiAtualizado
-      ? "Receita atualizada com sucesso!"
-      : "Não foi encontrado o id"
-  );
-};
-
-"batata frita".indexOf("frita"); // 7
-"batata frita".indexOf("ovo"); // -1
 
 const buscarReceita = (termoBuscado) => {
 
